@@ -1,0 +1,1528 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: sanctum/csrf-cookie
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: ''
+        headers:
+          cache-control: 'no-cache, private'
+          vary: X-Inertia
+          access-control-allow-origin: '*'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkIzbkZHQ29GTDFZQmc0TGJUK0JwdVE9PSIsInZhbHVlIjoiV1JsdFUzVWI2SEdjTnBHQW16M3M1VURsTnEvUDhlSkY3M2tYU3Q3VC9yUzlOVjVSRmY2QjJ1UHltVEZUV3dCbURUcncvM3lHSWVOdnF3OFdsdzRyNUszUlp5SUo3SkhSK3NlRE9JYzR3U3crUEhpeVo5ODk1K2l0UHQrR1FvZzEiLCJtYWMiOiI1NjhmNWI1NTM4MTAyYjAyYTJlZDVlNDE0ODE1MWMwNTk3YzE5M2JkYWNiODFiNjQyYTM0YWVjYzMwYTljZDk1IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjRiMnh6dHhHNU56UEMrd1ZRV3Vhcnc9PSIsInZhbHVlIjoiQlNZbGw5YkdialFKb0hkNkpZRHBrL2dtSllKSzZvTVlGbWNpeGIvK2RleGJQaWRvRURob2Jja0k1SjlYaFZPNEorbHhlMmpvREpuMkF4K0k2Q0swdDNyQ1crWGY2N2MrYUYrc0VKb011K2Q2NUxBNWxUNSt5RnZhMkJsYk5QU3MiLCJtYWMiOiJmOTA5YjU5YTVjM2Y3MGUwZTBlMzFjZDYwMzZjYzhmM2I0N2RmZWQyMjMzNGYzZmYwYjRhYjJjNmJmMWQ2MTNkIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: _ignition/health-check
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"can_execute_commands":true}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: _ignition/execute-solution
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      solution:
+        name: solution
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      parameters:
+        name: parameters
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      solution: qui
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: _ignition/update-config
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      theme:
+        name: theme
+        description: ''
+        required: true
+        example: light
+        type: string
+        enumValues:
+          - light
+          - dark
+          - auto
+        exampleWasSpecified: false
+        custom: []
+      editor:
+        name: editor
+        description: ''
+        required: true
+        example: laudantium
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      hide_solutions:
+        name: hide_solutions
+        description: ''
+        required: true
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      theme: light
+      editor: laudantium
+      hide_solutions: true
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      0: GET
+      2: POST
+      3: PUT
+      4: PATCH
+      5: DELETE
+      6: OPTIONS
+    uri: /
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Invoke the controller method.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 302
+        content: |-
+          <!DOCTYPE html>
+          <html>
+              <head>
+                  <meta charset="UTF-8" />
+                  <meta http-equiv="refresh" content="0;url='/dashboard'" />
+
+                  <title>Redirecting to /dashboard</title>
+              </head>
+              <body>
+                  Redirecting to <a href="/dashboard">/dashboard</a>.
+              </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          location: /dashboard
+          content-type: application/json
+          vary: X-Inertia
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkZrYU5ocy9RRFc2L3dhbzIyQTM3WWc9PSIsInZhbHVlIjoiZlhjSkIyaUxWM3N4c3Y5TVV0VEY5dzFIemJocTYvdUFhMXhJZjUxeG9FSG9RSGVwcWFGNUVuY3dySkY2TmE3YWVKdkdHNnZqNmF2MGlvQU8zVTkyNTRBeTZqd1UrcDJqL2Z2NWZTMjNSUjVIVWtUMmFad2piQ3RyaWtqUk5XSXciLCJtYWMiOiJmOTAzYjk1ZDI3YjZlNWI3MzFlYzBmYWJkMzViMzBlOTBmYzIzZTYzOGVkYWJmNWJiZjU3NWU1OGM3ZjlkMTNlIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkFtcjloNVRyVjJRWWhMbHpDejVaMEE9PSIsInZhbHVlIjoid3VUVTJCeWdTSlQ4M3JaaDFjc2xJd3cyUDlPUzh1VTdpQ3h3RHdLRWV5c1ZKNndHWmNiNHlMeGxweXhML0lnZkVlbzNSZ0k1RFFKdFZQZUx5OTVJUkdURzZoK094TnpZa3lhMlpEMnA0SisrUXBvOW9BczE1ckNiaDNEYXRQWFEiLCJtYWMiOiJhMjdkOTViZjJiZDk1NzIwY2FjYzVlZjVjOTc3MTZiODdjZWQyY2RjNTdkYjdiOTQwOWYyYmVmYTMxMmYwNWMyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: dashboard
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkN2aHRDMUdETktMeXB3N0gwRzIzanc9PSIsInZhbHVlIjoiVzFja2pjVXA4eGVYMjIxcVRFZXZ4aWlyVEh4MUFQTkliUktrZ3pGOG1ObzYyQjNueDY0MWlnQUZzRU41U1RyQ1dqWVJTVjFVb1d2NjV5THVYVVg0Zk9FMGR3ZEJsY2pvdUozTElGZU5rSTFlaW9YK3J4OGMwajlTOTFXTFpmbE0iLCJtYWMiOiI4ZjIwYzFmMTcxM2I2MGVhYWViZmI1MDBhN2MxNDA4NDg5ZjEwYzk1MDRlZDA3ZmIzYWIzOWFmZjg4MDZjNGJlIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ilo5QlhkT0U4TjhjWkx1OE1BM0hmR0E9PSIsInZhbHVlIjoiL24rUGZNUjhhTm5OVVUxZ2tHdVdwWWZkbFhpWjJFTk4ycVdPRWhxcW5ucUZaTU5jNTU4RHdzbE16eW1hMkNFaG85SUZOSDhXME1JSkw1Q3Mzdlg0MG8rOTlRdzRHTzB4MTd5V0swYWRDOEFVUnVTOXA1Vmp3aEZyZUs4cE5MOHYiLCJtYWMiOiJkZWFiZDJhOGQwOGRlYWNmMjA3MjU3ODBiNGViM2QxMzg5MzE3YWU1OTRiN2I3ZjE0MWRlYWFmMmQzYjJmNTBlIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: task
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkdnbW5OMEkyTGtpekIyMExQODFRZWc9PSIsInZhbHVlIjoiaU04clZ4Y0wrWE1BdjgycHlwaGpQQW9oRnVlaHBuVHpubi94VXM0ZnRHaUczM0JDcVQ2M1RlNUVGV3ZpTU5OSUpaV2FSMEJ4UThsUkpBUms1akl6VjRDUlRPOUw0Z1V0ZEFJWkQ2V1Y3UFpLMUwySUR4Ymx4VTdLNXdHbjd2UCsiLCJtYWMiOiIyYTk5NGE5NGMwYTEzN2RhOWUzOGVjYzcyODA4YjMxODI1MmE3MWUxNGViZDU3OTk0NzFjZjc1ODY2OTU5NDIwIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlI3dGFWTFM5MnQvQUNsR1lzT3lUZlE9PSIsInZhbHVlIjoia013eVZiQ2cyQmJKRlkyd2xuOHAwdkNtL1grSWJlV2hUKzUzek1XdGJwcVlnZmdKaTFmNERZRnZwTFJNbFJPQ3JOdjd4NjVETGZkbFBUanNxYzlvaGJLeVJWWU9tTkRKZHVPRGZ0VGtzcVIrWjdabzFMNkR2QzV6YXZCNmgwejYiLCJtYWMiOiIxNGJmZTM3MjEwOTg3NTkyMDg3MTVlNjliYjU1NDdjY2ZmNWQyZjZhYzBmMTg4NTQyNDNmZDgxNWE0MzE0ODcyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: task/create
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik5KTjB6eVNFQk9XS3ptZGN0UnR2SWc9PSIsInZhbHVlIjoiYlBtV3JkcVhkcjB5emNFZFVhUkhGdVcrVEZ0ZllTaTY5M043eFpnV0Njc0c3SEc0ZHNlMkZITmFJMzRXUUlGZ1VSRXFMdGtUcG9aUEFCWGVOeHhWbzB2eW5OeGwyRnZtdXpVYWZWQWsxbUFid1RQek9OZjMrMmprNkMyM0Q5dXkiLCJtYWMiOiI3ZDE0ZTBhNWY0MzBjYmExNjQzN2EyZTIxOTIwMDcxM2U2MTdlMDE3OTIyZTc3ZDkwYmNhNmFlYzhlMzk3Yjk5IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InorQTN3VXZLWVVJTHA1cmJ5YTFkemc9PSIsInZhbHVlIjoiSGF4WHpmakxSb2dBY3FLTzNLU3RIbjVYWWZuM3RQbndSbU1YWktEUlVGbCszQjVUd2VNaFJCQTMwNGVHcHdweCsvZ01nTm5lNVFVK2FOeWwya2JqYlcyMnphSUJwZks1dFk5MnVwbUdVc2MvSUVLMHRMMTBwSHNQbFQ2ZGtEUzMiLCJtYWMiOiJkNjM0YmYyODc2ZTM1Nzk1YmY3YjYxNGM4NzU5OWY0Njg3NDliZGQyNTFjOGM3NTg5Y2E3ODQ2NmQzYzc1Yzc5IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: task
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: nchwvrsfmdxmbfzvhzi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Facilis dolores voluptas quos occaecati.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      due_date:
+        name: due_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2024-04-15T09:51:18'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      status:
+        name: status
+        description: ''
+        required: true
+        example: completed
+        type: string
+        enumValues:
+          - pending
+          - completed
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: nchwvrsfmdxmbfzvhzi
+      description: 'Facilis dolores voluptas quos occaecati.'
+      due_date: '2024-04-15T09:51:18'
+      status: completed
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'task/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the task.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IktxTnBBWE1TaEpnOVZsUVRIZXo2bHc9PSIsInZhbHVlIjoiSXhkbDdCU1NtcDRzQWlWc2JKTHYxblpVREtPRzhpMVNCSFV3Q1JSUGtoY1VXdk9CcDBFdCtjTlhxVURaQnU4R3hkNEZQY1pqWkQxT1FjeEwySFdkMHo2aEcrbzJlaWxyYUkwdElXYzQ0MlhRdExOT2hreVNGc1JXa1BrOERtRWMiLCJtYWMiOiIxYTMxMDdjOWUzYzM0Y2JjNGQwY2YzOWE4MzQzNGUwNjM0ZTYyZjQwNzBjYzFhYmY1YWE1ZGYxYTA1NjkzMjliIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IllOL0xIbnpVTnZ1aGNFbXVHbUQxelE9PSIsInZhbHVlIjoiWCtDYnVZR3M1TW9NWUg5c2pNTnBoYjd1UWtBZFp4ZUVKSU13Q0JoVGZxOEN1V0F0c041bURNWEY2UXRzbmxCSk9Fbyt2dWRxYU82eWhUMkF0MlJCT1J4aHBLSlk5STZUbXkrSHltKzhKZE4rRmFITUZiRVpDY2ZVTTErdDI2MisiLCJtYWMiOiIzYTM4ZjYwMzk1OWUyNTRmYzA4OGI5N2RmNzViOGUxZWJjZjQ1OWU4OWVlN2E0NDRiNmNmN2VlNDI2ZjcwNDcyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'task/{task_id}/edit'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the form for editing the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      task_id:
+        name: task_id
+        description: 'The ID of the task.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      task_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkttNzhSb2dLaXhkSDNHYkppd1c4UFE9PSIsInZhbHVlIjoiTEpEK3pONTRaOW91b0NtLzArVk1hZVR6b0NiY3hoczBSVzdHcnBPcmtDMkhmU2p4UnhzUWVhL3o5dVFGeEZ1M0t1UmZhcHNBaHZwTFFueUNFbkFmU29LQkdjR081ay9zeUU5RThOMEVCU0JHbHlDZnp0emhxUTZWK3dRK2N2Tm4iLCJtYWMiOiJmMDJhMDVjODNkZjkxYzc0YmFhZGQyNzUyNDRmZTJjODQxOTg2NzFhYTk0OWQyZDJmOGUwODRkMDAzNTYzZDVkIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjFwTDdTOVBabUxYZDZUTC9HOHdjVnc9PSIsInZhbHVlIjoiTExoUGFkZENaQUFxbkFvWFR4cFBjQVlCMHJ1eW1RQ3VZWDc4Y3R0cW5OL0dxcDlqTXYzSGU5a3ZoSWtKRFMzMWFJWmYxTi91U2RzUks4ajhLb0ZDZWllZUJKZGJ2TEdVci9hL3IzblhaWnpadHVVeStiN2dXMjU5ZUlGMEpCM0IiLCJtYWMiOiI0NTA5NDA0MGU0ZGEzNmViNGQ1NzZlMWNmNzM2OTY5Mjg1N2M0MTVmYjczZjBkZjg4ZTI0OGQ3NDI1Yzk1NTJlIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'task/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the task.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: riygtrwxqqksmzpd
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Voluptas veritatis veniam fugit laboriosam facilis similique.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      due_date:
+        name: due_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2024-04-15T09:51:18'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      status:
+        name: status
+        description: ''
+        required: true
+        example: completed
+        type: string
+        enumValues:
+          - pending
+          - completed
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: riygtrwxqqksmzpd
+      description: 'Voluptas veritatis veniam fugit laboriosam facilis similique.'
+      due_date: '2024-04-15T09:51:18'
+      status: completed
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'task/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the task.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: profile
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Display the user's profile form."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImZnZkVLMGlabHU2T0xjWE5jWm52NGc9PSIsInZhbHVlIjoiOXlFMTNBaGRHKzkvY3N4VklrUWZ6L2REMkhoSHlVcTR2MTNKZ0lpY0JRRDRiK3hnbkJ3MlR0bzBEK0FQQU1hTFhLc0dUTWZsUWdud2k5aUhrdVE5OTg2T1JJVnZ6a0NJUFpUcUVpYVYzYTludFFqZW12aGZCUXQ1S0dKbjNMbWIiLCJtYWMiOiIwZDBmNmFiODc1ZTRjZmI0NWJjYjE2NTY2NTc4ZmJkZmZhOWJhYzVmZmEyYThjYjBkOWIyMjZkOTdiMmVlOTY1IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ild4bm1USjZYYndZTWJHSG1hSitLd0E9PSIsInZhbHVlIjoicWx5cFVocWZhbGRyWUNWRzFCcjNSNktLRjRqNEpNQkNORkRkSVJDRXBkcW9QVS9FYS9aeHBqYWNEZ0hpeW51RDFYekhvNktRRC9lS0h4UWxhZE5SMUJvY3RWZUk4Q0ZzTWRFci9zdFdWaEc3Ny9HQlo3NGZpOHRQWDMzQ0lxSGciLCJtYWMiOiI2NWNmOTYyYTgxNTY3MTcwYWRhNmY3YTMzNjQ5MjMyYjgxMjQ3OTk2YjNiMDA2NTUzMjgzMjc2MThjYmM4NWE2IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: profile
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Delete the user's account."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: ''
+        required: true
+        example: earum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      password: earum
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the registration view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          <!DOCTYPE html>
+          <html lang="en" class="dark">
+              <head>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                  <title inertia>Laravel</title>
+
+                  <!-- Fonts -->
+                  <link rel="preconnect" href="https://fonts.bunny.net">
+                  <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+                  <!-- Scripts -->
+                  <script type="text/javascript">const Ziggy={"url":"http:\/\/localhost","port":null,"defaults":{},"routes":{"sanctum.csrf-cookie":{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"]},"ignition.healthCheck":{"uri":"_ignition\/health-check","methods":["GET","HEAD"]},"ignition.executeSolution":{"uri":"_ignition\/execute-solution","methods":["POST"]},"ignition.updateConfig":{"uri":"_ignition\/update-config","methods":["POST"]},"dashboard":{"uri":"dashboard","methods":["GET","HEAD"]},"task.index":{"uri":"task","methods":["GET","HEAD"]},"task.create":{"uri":"task\/create","methods":["GET","HEAD"]},"task.store":{"uri":"task","methods":["POST"]},"task.show":{"uri":"task\/{task}","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.edit":{"uri":"task\/{task}\/edit","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.update":{"uri":"task\/{task}","methods":["PUT","PATCH"],"parameters":["task"],"bindings":{"task":"id"}},"task.destroy":{"uri":"task\/{task}","methods":["DELETE"],"parameters":["task"],"bindings":{"task":"id"}},"profile.edit":{"uri":"profile","methods":["GET","HEAD"]},"profile.update":{"uri":"profile","methods":["PATCH"]},"profile.destroy":{"uri":"profile","methods":["DELETE"]},"register":{"uri":"register","methods":["GET","HEAD"]},"login":{"uri":"login","methods":["GET","HEAD"]},"password.request":{"uri":"forgot-password","methods":["GET","HEAD"]},"password.email":{"uri":"forgot-password","methods":["POST"]},"password.reset":{"uri":"reset-password\/{token}","methods":["GET","HEAD"],"parameters":["token"]},"password.store":{"uri":"reset-password","methods":["POST"]},"verification.notice":{"uri":"verify-email","methods":["GET","HEAD"]},"verification.verify":{"uri":"verify-email\/{id}\/{hash}","methods":["GET","HEAD"],"parameters":["id","hash"]},"verification.send":{"uri":"email\/verification-notification","methods":["POST"]},"password.confirm":{"uri":"confirm-password","methods":["GET","HEAD"]},"password.update":{"uri":"password","methods":["PUT"]},"logout":{"uri":"logout","methods":["POST"]}}};!function(t,r){"object"==typeof exports&&"undefined"!=typeof module?module.exports=r():"function"==typeof define&&define.amd?define(r):(t||self).route=r()}(this,function(){function t(){try{var r=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}))}catch(r){}return(t=function(){return!!r})()}function r(t){var r=function(t,r){if("object"!=typeof t||!t)return t;var n=t[Symbol.toPrimitive];if(void 0!==n){var e=n.call(t,"string");if("object"!=typeof e)return e;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(t)}(t);return"symbol"==typeof r?r:String(r)}function n(t,n){for(var e=0;e<n.length;e++){var o=n[e];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,r(o.key),o)}}function e(t,r,e){return r&&n(t.prototype,r),e&&n(t,e),Object.defineProperty(t,"prototype",{writable:!1}),t}function o(){return o=Object.assign?Object.assign.bind():function(t){for(var r=1;r<arguments.length;r++){var n=arguments[r];for(var e in n)Object.prototype.hasOwnProperty.call(n,e)&&(t[e]=n[e])}return t},o.apply(this,arguments)}function i(t){return i=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(t){return t.__proto__||Object.getPrototypeOf(t)},i(t)}function u(t,r){return u=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,r){return t.__proto__=r,t},u(t,r)}function f(r){var n="function"==typeof Map?new Map:void 0;return f=function(r){if(null===r||!function(t){try{return-1!==Function.toString.call(t).indexOf("[native code]")}catch(r){return"function"==typeof t}}(r))return r;if("function"!=typeof r)throw new TypeError("Super expression must either be null or a function");if(void 0!==n){if(n.has(r))return n.get(r);n.set(r,e)}function e(){return function(r,n,e){if(t())return Reflect.construct.apply(null,arguments);var o=[null];o.push.apply(o,n);var i=new(r.bind.apply(r,o));return e&&u(i,e.prototype),i}(r,arguments,i(this).constructor)}return e.prototype=Object.create(r.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),u(e,r)},f(r)}var a=String.prototype.replace,c=/%20/g,l="RFC3986",s={default:l,formatters:{RFC1738:function(t){return a.call(t,c,"+")},RFC3986:function(t){return String(t)}},RFC1738:"RFC1738",RFC3986:l},v=Object.prototype.hasOwnProperty,p=Array.isArray,y=function(){for(var t=[],r=0;r<256;++r)t.push("%"+((r<16?"0":"")+r.toString(16)).toUpperCase());return t}(),d=function(t,r){for(var n=r&&r.plainObjects?Object.create(null):{},e=0;e<t.length;++e)void 0!==t[e]&&(n[e]=t[e]);return n},b={arrayToObject:d,assign:function(t,r){return Object.keys(r).reduce(function(t,n){return t[n]=r[n],t},t)},combine:function(t,r){return[].concat(t,r)},compact:function(t){for(var r=[{obj:{o:t},prop:"o"}],n=[],e=0;e<r.length;++e)for(var o=r[e],i=o.obj[o.prop],u=Object.keys(i),f=0;f<u.length;++f){var a=u[f],c=i[a];"object"==typeof c&&null!==c&&-1===n.indexOf(c)&&(r.push({obj:i,prop:a}),n.push(c))}return function(t){for(;t.length>1;){var r=t.pop(),n=r.obj[r.prop];if(p(n)){for(var e=[],o=0;o<n.length;++o)void 0!==n[o]&&e.push(n[o]);r.obj[r.prop]=e}}}(r),t},decode:function(t,r,n){var e=t.replace(/\+/g," ");if("iso-8859-1"===n)return e.replace(/%[0-9a-f]{2}/gi,unescape);try{return decodeURIComponent(e)}catch(t){return e}},encode:function(t,r,n,e,o){if(0===t.length)return t;var i=t;if("symbol"==typeof t?i=Symbol.prototype.toString.call(t):"string"!=typeof t&&(i=String(t)),"iso-8859-1"===n)return escape(i).replace(/%u[0-9a-f]{4}/gi,function(t){return"%26%23"+parseInt(t.slice(2),16)+"%3B"});for(var u="",f=0;f<i.length;++f){var a=i.charCodeAt(f);45===a||46===a||95===a||126===a||a>=48&&a<=57||a>=65&&a<=90||a>=97&&a<=122||o===s.RFC1738&&(40===a||41===a)?u+=i.charAt(f):a<128?u+=y[a]:a<2048?u+=y[192|a>>6]+y[128|63&a]:a<55296||a>=57344?u+=y[224|a>>12]+y[128|a>>6&63]+y[128|63&a]:(a=65536+((1023&a)<<10|1023&i.charCodeAt(f+=1)),u+=y[240|a>>18]+y[128|a>>12&63]+y[128|a>>6&63]+y[128|63&a])}return u},isBuffer:function(t){return!(!t||"object"!=typeof t||!(t.constructor&&t.constructor.isBuffer&&t.constructor.isBuffer(t)))},isRegExp:function(t){return"[object RegExp]"===Object.prototype.toString.call(t)},maybeMap:function(t,r){if(p(t)){for(var n=[],e=0;e<t.length;e+=1)n.push(r(t[e]));return n}return r(t)},merge:function t(r,n,e){if(!n)return r;if("object"!=typeof n){if(p(r))r.push(n);else{if(!r||"object"!=typeof r)return[r,n];(e&&(e.plainObjects||e.allowPrototypes)||!v.call(Object.prototype,n))&&(r[n]=!0)}return r}if(!r||"object"!=typeof r)return[r].concat(n);var o=r;return p(r)&&!p(n)&&(o=d(r,e)),p(r)&&p(n)?(n.forEach(function(n,o){if(v.call(r,o)){var i=r[o];i&&"object"==typeof i&&n&&"object"==typeof n?r[o]=t(i,n,e):r.push(n)}else r[o]=n}),r):Object.keys(n).reduce(function(r,o){var i=n[o];return r[o]=v.call(r,o)?t(r[o],i,e):i,r},o)}},h=Object.prototype.hasOwnProperty,g={brackets:function(t){return t+"[]"},comma:"comma",indices:function(t,r){return t+"["+r+"]"},repeat:function(t){return t}},m=Array.isArray,j=String.prototype.split,w=Array.prototype.push,O=function(t,r){w.apply(t,m(r)?r:[r])},E=Date.prototype.toISOString,S=s.default,R={addQueryPrefix:!1,allowDots:!1,charset:"utf-8",charsetSentinel:!1,delimiter:"&",encode:!0,encoder:b.encode,encodeValuesOnly:!1,format:S,formatter:s.formatters[S],indices:!1,serializeDate:function(t){return E.call(t)},skipNulls:!1,strictNullHandling:!1},T=function t(r,n,e,o,i,u,f,a,c,l,s,v,p,y){var d,h=r;if("function"==typeof f?h=f(n,h):h instanceof Date?h=l(h):"comma"===e&&m(h)&&(h=b.maybeMap(h,function(t){return t instanceof Date?l(t):t})),null===h){if(o)return u&&!p?u(n,R.encoder,y,"key",s):n;h=""}if("string"==typeof(d=h)||"number"==typeof d||"boolean"==typeof d||"symbol"==typeof d||"bigint"==typeof d||b.isBuffer(h)){if(u){var g=p?n:u(n,R.encoder,y,"key",s);if("comma"===e&&p){for(var w=j.call(String(h),","),E="",S=0;S<w.length;++S)E+=(0===S?"":",")+v(u(w[S],R.encoder,y,"value",s));return[v(g)+"="+E]}return[v(g)+"="+v(u(h,R.encoder,y,"value",s))]}return[v(n)+"="+v(String(h))]}var T,k=[];if(void 0===h)return k;if("comma"===e&&m(h))T=[{value:h.length>0?h.join(",")||null:void 0}];else if(m(f))T=f;else{var x=Object.keys(h);T=a?x.sort(a):x}for(var N=0;N<T.length;++N){var C=T[N],A="object"==typeof C&&void 0!==C.value?C.value:h[C];if(!i||null!==A){var D=m(h)?"function"==typeof e?e(n,C):n:n+(c?"."+C:"["+C+"]");O(k,t(A,D,e,o,i,u,f,a,c,l,s,v,p,y))}}return k},k=Object.prototype.hasOwnProperty,x=Array.isArray,N={allowDots:!1,allowPrototypes:!1,arrayLimit:20,charset:"utf-8",charsetSentinel:!1,comma:!1,decoder:b.decode,delimiter:"&",depth:5,ignoreQueryPrefix:!1,interpretNumericEntities:!1,parameterLimit:1e3,parseArrays:!0,plainObjects:!1,strictNullHandling:!1},C=function(t){return t.replace(/&#(\d+);/g,function(t,r){return String.fromCharCode(parseInt(r,10))})},A=function(t,r){return t&&"string"==typeof t&&r.comma&&t.indexOf(",")>-1?t.split(","):t},D=function(t,r,n,e){if(t){var o=n.allowDots?t.replace(/\.([^.[]+)/g,"[$1]"):t,i=/(\[[^[\]]*])/g,u=n.depth>0&&/(\[[^[\]]*])/.exec(o),f=u?o.slice(0,u.index):o,a=[];if(f){if(!n.plainObjects&&k.call(Object.prototype,f)&&!n.allowPrototypes)return;a.push(f)}for(var c=0;n.depth>0&&null!==(u=i.exec(o))&&c<n.depth;){if(c+=1,!n.plainObjects&&k.call(Object.prototype,u[1].slice(1,-1))&&!n.allowPrototypes)return;a.push(u[1])}return u&&a.push("["+o.slice(u.index)+"]"),function(t,r,n,e){for(var o=e?r:A(r,n),i=t.length-1;i>=0;--i){var u,f=t[i];if("[]"===f&&n.parseArrays)u=[].concat(o);else{u=n.plainObjects?Object.create(null):{};var a="["===f.charAt(0)&&"]"===f.charAt(f.length-1)?f.slice(1,-1):f,c=parseInt(a,10);n.parseArrays||""!==a?!isNaN(c)&&f!==a&&String(c)===a&&c>=0&&n.parseArrays&&c<=n.arrayLimit?(u=[])[c]=o:"__proto__"!==a&&(u[a]=o):u={0:o}}o=u}return o}(a,r,n,e)}},$=function(t,r){var n=function(t){if(!t)return N;if(null!=t.decoder&&"function"!=typeof t.decoder)throw new TypeError("Decoder has to be a function.");if(void 0!==t.charset&&"utf-8"!==t.charset&&"iso-8859-1"!==t.charset)throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");return{allowDots:void 0===t.allowDots?N.allowDots:!!t.allowDots,allowPrototypes:"boolean"==typeof t.allowPrototypes?t.allowPrototypes:N.allowPrototypes,arrayLimit:"number"==typeof t.arrayLimit?t.arrayLimit:N.arrayLimit,charset:void 0===t.charset?N.charset:t.charset,charsetSentinel:"boolean"==typeof t.charsetSentinel?t.charsetSentinel:N.charsetSentinel,comma:"boolean"==typeof t.comma?t.comma:N.comma,decoder:"function"==typeof t.decoder?t.decoder:N.decoder,delimiter:"string"==typeof t.delimiter||b.isRegExp(t.delimiter)?t.delimiter:N.delimiter,depth:"number"==typeof t.depth||!1===t.depth?+t.depth:N.depth,ignoreQueryPrefix:!0===t.ignoreQueryPrefix,interpretNumericEntities:"boolean"==typeof t.interpretNumericEntities?t.interpretNumericEntities:N.interpretNumericEntities,parameterLimit:"number"==typeof t.parameterLimit?t.parameterLimit:N.parameterLimit,parseArrays:!1!==t.parseArrays,plainObjects:"boolean"==typeof t.plainObjects?t.plainObjects:N.plainObjects,strictNullHandling:"boolean"==typeof t.strictNullHandling?t.strictNullHandling:N.strictNullHandling}}(r);if(""===t||null==t)return n.plainObjects?Object.create(null):{};for(var e="string"==typeof t?function(t,r){var n,e={},o=(r.ignoreQueryPrefix?t.replace(/^\?/,""):t).split(r.delimiter,Infinity===r.parameterLimit?void 0:r.parameterLimit),i=-1,u=r.charset;if(r.charsetSentinel)for(n=0;n<o.length;++n)0===o[n].indexOf("utf8=")&&("utf8=%E2%9C%93"===o[n]?u="utf-8":"utf8=%26%2310003%3B"===o[n]&&(u="iso-8859-1"),i=n,n=o.length);for(n=0;n<o.length;++n)if(n!==i){var f,a,c=o[n],l=c.indexOf("]="),s=-1===l?c.indexOf("="):l+1;-1===s?(f=r.decoder(c,N.decoder,u,"key"),a=r.strictNullHandling?null:""):(f=r.decoder(c.slice(0,s),N.decoder,u,"key"),a=b.maybeMap(A(c.slice(s+1),r),function(t){return r.decoder(t,N.decoder,u,"value")})),a&&r.interpretNumericEntities&&"iso-8859-1"===u&&(a=C(a)),c.indexOf("[]=")>-1&&(a=x(a)?[a]:a),e[f]=k.call(e,f)?b.combine(e[f],a):a}return e}(t,n):t,o=n.plainObjects?Object.create(null):{},i=Object.keys(e),u=0;u<i.length;++u){var f=i[u],a=D(f,e[f],n,"string"==typeof t);o=b.merge(o,a,n)}return b.compact(o)},F=/*#__PURE__*/function(){function t(t,r,n){var e,o;this.name=t,this.definition=r,this.bindings=null!=(e=r.bindings)?e:{},this.wheres=null!=(o=r.wheres)?o:{},this.config=n}var r=t.prototype;return r.matchesUrl=function(t){var r=this;if(!this.definition.methods.includes("GET"))return!1;var n=this.template.replace(/(\/?){([^}?]*)(\??)}/g,function(t,n,e,o){var i,u="(?<"+e+">"+((null==(i=r.wheres[e])?void 0:i.replace(/(^\^)|(\$$)/g,""))||"[^/?]+")+")";return o?"("+n+u+")?":""+n+u}).replace(/^\w+:\/\//,""),e=t.replace(/^\w+:\/\//,"").split("?"),o=e[0],i=e[1],u=new RegExp("^"+n+"/?$").exec(decodeURI(o));if(u){for(var f in u.groups)u.groups[f]="string"==typeof u.groups[f]?decodeURIComponent(u.groups[f]):u.groups[f];return{params:u.groups,query:$(i)}}return!1},r.compile=function(t){var r=this;return this.parameterSegments.length?this.template.replace(/{([^}?]+)(\??)}/g,function(n,e,o){var i,u;if(!o&&[null,void 0].includes(t[e]))throw new Error("Ziggy error: '"+e+"' parameter is required for route '"+r.name+"'.");if(r.wheres[e]&&!new RegExp("^"+(o?"("+r.wheres[e]+")?":r.wheres[e])+"$").test(null!=(u=t[e])?u:""))throw new Error("Ziggy error: '"+e+"' parameter does not match required format '"+r.wheres[e]+"' for route '"+r.name+"'.");return encodeURI(null!=(i=t[e])?i:"").replace(/%7C/g,"|").replace(/%25/g,"%").replace(/\$/g,"%24")}).replace(this.origin+"//",this.origin+"/").replace(/\/+$/,""):this.template},e(t,[{key:"template",get:function(){var t=(this.origin+"/"+this.definition.uri).replace(/\/+$/,"");return""===t?"/":t}},{key:"origin",get:function(){return this.config.absolute?this.definition.domain?""+this.config.url.match(/^\w+:\/\//)[0]+this.definition.domain+(this.config.port?":"+this.config.port:""):this.config.url:""}},{key:"parameterSegments",get:function(){var t,r;return null!=(t=null==(r=this.template.match(/{[^}?]+\??}/g))?void 0:r.map(function(t){return{name:t.replace(/{|\??}/g,""),required:!/\?}$/.test(t)}}))?t:[]}}]),t}(),I=/*#__PURE__*/function(t){var r,n;function i(r,n,e,i){var u;if(void 0===e&&(e=!0),(u=t.call(this)||this).t=null!=i?i:"undefined"!=typeof Ziggy?Ziggy:null==globalThis?void 0:globalThis.Ziggy,u.t=o({},u.t,{absolute:e}),r){if(!u.t.routes[r])throw new Error("Ziggy error: route '"+r+"' is not in the route list.");u.i=new F(r,u.t.routes[r],u.t),u.u=u.l(n)}return u}n=t,(r=i).prototype=Object.create(n.prototype),r.prototype.constructor=r,u(r,n);var f=i.prototype;return f.toString=function(){var t=this,r=Object.keys(this.u).filter(function(r){return!t.i.parameterSegments.some(function(t){return t.name===r})}).filter(function(t){return"_query"!==t}).reduce(function(r,n){var e;return o({},r,((e={})[n]=t.u[n],e))},{});return this.i.compile(this.u)+function(t,r){var n,e=t,o=function(t){if(!t)return R;if(null!=t.encoder&&"function"!=typeof t.encoder)throw new TypeError("Encoder has to be a function.");var r=t.charset||R.charset;if(void 0!==t.charset&&"utf-8"!==t.charset&&"iso-8859-1"!==t.charset)throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");var n=s.default;if(void 0!==t.format){if(!h.call(s.formatters,t.format))throw new TypeError("Unknown format option provided.");n=t.format}var e=s.formatters[n],o=R.filter;return("function"==typeof t.filter||m(t.filter))&&(o=t.filter),{addQueryPrefix:"boolean"==typeof t.addQueryPrefix?t.addQueryPrefix:R.addQueryPrefix,allowDots:void 0===t.allowDots?R.allowDots:!!t.allowDots,charset:r,charsetSentinel:"boolean"==typeof t.charsetSentinel?t.charsetSentinel:R.charsetSentinel,delimiter:void 0===t.delimiter?R.delimiter:t.delimiter,encode:"boolean"==typeof t.encode?t.encode:R.encode,encoder:"function"==typeof t.encoder?t.encoder:R.encoder,encodeValuesOnly:"boolean"==typeof t.encodeValuesOnly?t.encodeValuesOnly:R.encodeValuesOnly,filter:o,format:n,formatter:e,serializeDate:"function"==typeof t.serializeDate?t.serializeDate:R.serializeDate,skipNulls:"boolean"==typeof t.skipNulls?t.skipNulls:R.skipNulls,sort:"function"==typeof t.sort?t.sort:null,strictNullHandling:"boolean"==typeof t.strictNullHandling?t.strictNullHandling:R.strictNullHandling}}(r);"function"==typeof o.filter?e=(0,o.filter)("",e):m(o.filter)&&(n=o.filter);var i=[];if("object"!=typeof e||null===e)return"";var u=g[r&&r.arrayFormat in g?r.arrayFormat:r&&"indices"in r?r.indices?"indices":"repeat":"indices"];n||(n=Object.keys(e)),o.sort&&n.sort(o.sort);for(var f=0;f<n.length;++f){var a=n[f];o.skipNulls&&null===e[a]||O(i,T(e[a],a,u,o.strictNullHandling,o.skipNulls,o.encode?o.encoder:null,o.filter,o.sort,o.allowDots,o.serializeDate,o.format,o.formatter,o.encodeValuesOnly,o.charset))}var c=i.join(o.delimiter),l=!0===o.addQueryPrefix?"?":"";return o.charsetSentinel&&(l+="iso-8859-1"===o.charset?"utf8=%26%2310003%3B&":"utf8=%E2%9C%93&"),c.length>0?l+c:""}(o({},r,this.u._query),{addQueryPrefix:!0,arrayFormat:"indices",encodeValuesOnly:!0,skipNulls:!0,encoder:function(t,r){return"boolean"==typeof t?Number(t):r(t)}})},f.v=function(t){var r=this;t?this.t.absolute&&t.startsWith("/")&&(t=this.p().host+t):t=this.h();var n={},e=Object.entries(this.t.routes).find(function(e){return n=new F(e[0],e[1],r.t).matchesUrl(t)})||[void 0,void 0];return o({name:e[0]},n,{route:e[1]})},f.h=function(){var t=this.p(),r=t.pathname,n=t.search;return(this.t.absolute?t.host+r:r.replace(this.t.url.replace(/^\w*:\/\/[^/]+/,""),"").replace(/^\/+/,"/"))+n},f.current=function(t,r){var n=this.v(),e=n.name,i=n.params,u=n.query,f=n.route;if(!t)return e;var a=new RegExp("^"+t.replace(/\./g,"\\.").replace(/\*/g,".*")+"$").test(e);if([null,void 0].includes(r)||!a)return a;var c=new F(e,f,this.t);r=this.l(r,c);var l=o({},i,u);return!(!Object.values(r).every(function(t){return!t})||Object.values(l).some(function(t){return void 0!==t}))||function t(r,n){return Object.entries(r).every(function(r){var e=r[0],o=r[1];return Array.isArray(o)&&Array.isArray(n[e])?o.every(function(t){return n[e].includes(t)}):"object"==typeof o&&"object"==typeof n[e]&&null!==o&&null!==n[e]?t(o,n[e]):n[e]==o})}(r,l)},f.p=function(){var t,r,n,e,o,i,u="undefined"!=typeof window?window.location:{},f=u.host,a=u.pathname,c=u.search;return{host:null!=(t=null==(r=this.t.location)?void 0:r.host)?t:void 0===f?"":f,pathname:null!=(n=null==(e=this.t.location)?void 0:e.pathname)?n:void 0===a?"":a,search:null!=(o=null==(i=this.t.location)?void 0:i.search)?o:void 0===c?"":c}},f.has=function(t){return Object.keys(this.t.routes).includes(t)},f.l=function(t,r){var n=this;void 0===t&&(t={}),void 0===r&&(r=this.i),null!=t||(t={}),t=["string","number"].includes(typeof t)?[t]:t;var e=r.parameterSegments.filter(function(t){return!n.t.defaults[t.name]});if(Array.isArray(t))t=t.reduce(function(t,r,n){var i,u;return o({},t,e[n]?((i={})[e[n].name]=r,i):"object"==typeof r?r:((u={})[r]="",u))},{});else if(1===e.length&&!t[e[0].name]&&(t.hasOwnProperty(Object.values(r.bindings)[0])||t.hasOwnProperty("id"))){var i;(i={})[e[0].name]=t,t=i}return o({},this.m(r),this.j(t,r))},f.m=function(t){var r=this;return t.parameterSegments.filter(function(t){return r.t.defaults[t.name]}).reduce(function(t,n,e){var i,u=n.name;return o({},t,((i={})[u]=r.t.defaults[u],i))},{})},f.j=function(t,r){var n=r.bindings,e=r.parameterSegments;return Object.entries(t).reduce(function(t,r){var i,u,f=r[0],a=r[1];if(!a||"object"!=typeof a||Array.isArray(a)||!e.some(function(t){return t.name===f}))return o({},t,((u={})[f]=a,u));if(!a.hasOwnProperty(n[f])){if(!a.hasOwnProperty("id"))throw new Error("Ziggy error: object passed as '"+f+"' parameter is missing route model binding key '"+n[f]+"'.");n[f]="id"}return o({},t,((i={})[f]=a[n[f]],i))},{})},f.valueOf=function(){return this.toString()},e(i,[{key:"params",get:function(){var t=this.v();return o({},t.params,t.query)}}]),i}(/*#__PURE__*/f(String));return function(t,r,n,e){var o=new I(t,r,n,e);return t?o.toString():o}});
+          </script>        <script type="module" >
+              import RefreshRuntime from 'http://[::1]:5173/@react-refresh'
+              RefreshRuntime.injectIntoGlobalHook(window)
+              window.$RefreshReg$ = () => {}
+              window.$RefreshSig$ = () => (type) => type
+              window.__vite_plugin_react_preamble_installed__ = true
+          </script>        <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.jsx"></script><script type="module" src="http://[::1]:5173/resources/js/Pages/Auth/Register.jsx"></script>            </head>
+              <body class="font-sans antialiased">
+                  <div id="app" data-page="{&quot;component&quot;:&quot;Auth\/Register&quot;,&quot;props&quot;:{&quot;errors&quot;:{},&quot;auth&quot;:{&quot;user&quot;:null}},&quot;url&quot;:&quot;\/register&quot;,&quot;version&quot;:&quot;6666cd76f96956469e7be39d750cc7d9&quot;}"></div>    </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: X-Inertia
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkUzL3ZEN1hvREtFNzhLd0lQWmNXWWc9PSIsInZhbHVlIjoiTG13U1UzNVBhazdrdzh6SHplSWJXU3hOc0lQQlIxZnh5Z3FqZ0J2M2ZPS0dTUEtnZHI1NHNNcmZVUTJ2NXhLOFhyYVowSzB2Wjg0YmNjbHpqZHNTYkpZLzZQYzQrYUo2N2EzL0xWakRSMXI1OFYwcjBJVlR3c1RaWkpBZHNSNm0iLCJtYWMiOiJjOGYwOGNhYThkNDEzNGVmYTJkMWU5OTdhY2ExNjhiNzI0MWFkNmY5Nzc3ODFiYzk5NjkyMzU1MzA0OTc0YzUzIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InMzVzQ5QkgzWVNwcnlLQjY5akZCQVE9PSIsInZhbHVlIjoiRGVjOVpqdEVLZkowbDMyU1NiMkxsSHZpL01pTGtZbzR2ZTUzMW9oeVhlTVZlVUVmeW9RQU9xNWdFcCt0QUx0elVhUG1NSkNoMmRuR2I1VStIRzRNNTNPcTBEbyt6L0wyVjY3MlJ6bkJGcTh2TVkrY085V0JxT1VncGZhWWFDOEMiLCJtYWMiOiJjZmNhNGI0Nzk2ZjhjMmIwZTdkMjIyMmMxNDQ4OTlkNThmZjdlOWNmZDgxMGNiMTVkNWU4ZTE5MmM3MzkyYjRkIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming registration request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: eedmqhzzyz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: quia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: eedmqhzzyz
+      password: quia
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the login view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          <!DOCTYPE html>
+          <html lang="en" class="dark">
+              <head>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                  <title inertia>Laravel</title>
+
+                  <!-- Fonts -->
+                  <link rel="preconnect" href="https://fonts.bunny.net">
+                  <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+                  <!-- Scripts -->
+                  <script type="text/javascript">Object.assign(Ziggy.routes,{"sanctum.csrf-cookie":{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"]},"ignition.healthCheck":{"uri":"_ignition\/health-check","methods":["GET","HEAD"]},"ignition.executeSolution":{"uri":"_ignition\/execute-solution","methods":["POST"]},"ignition.updateConfig":{"uri":"_ignition\/update-config","methods":["POST"]},"dashboard":{"uri":"dashboard","methods":["GET","HEAD"]},"task.index":{"uri":"task","methods":["GET","HEAD"]},"task.create":{"uri":"task\/create","methods":["GET","HEAD"]},"task.store":{"uri":"task","methods":["POST"]},"task.show":{"uri":"task\/{task}","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.edit":{"uri":"task\/{task}\/edit","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.update":{"uri":"task\/{task}","methods":["PUT","PATCH"],"parameters":["task"],"bindings":{"task":"id"}},"task.destroy":{"uri":"task\/{task}","methods":["DELETE"],"parameters":["task"],"bindings":{"task":"id"}},"profile.edit":{"uri":"profile","methods":["GET","HEAD"]},"profile.update":{"uri":"profile","methods":["PATCH"]},"profile.destroy":{"uri":"profile","methods":["DELETE"]},"register":{"uri":"register","methods":["GET","HEAD"]},"login":{"uri":"login","methods":["GET","HEAD"]},"password.request":{"uri":"forgot-password","methods":["GET","HEAD"]},"password.email":{"uri":"forgot-password","methods":["POST"]},"password.reset":{"uri":"reset-password\/{token}","methods":["GET","HEAD"],"parameters":["token"]},"password.store":{"uri":"reset-password","methods":["POST"]},"verification.notice":{"uri":"verify-email","methods":["GET","HEAD"]},"verification.verify":{"uri":"verify-email\/{id}\/{hash}","methods":["GET","HEAD"],"parameters":["id","hash"]},"verification.send":{"uri":"email\/verification-notification","methods":["POST"]},"password.confirm":{"uri":"confirm-password","methods":["GET","HEAD"]},"password.update":{"uri":"password","methods":["PUT"]},"logout":{"uri":"logout","methods":["POST"]}});</script>        <script type="module" >
+              import RefreshRuntime from 'http://[::1]:5173/@react-refresh'
+              RefreshRuntime.injectIntoGlobalHook(window)
+              window.$RefreshReg$ = () => {}
+              window.$RefreshSig$ = () => (type) => type
+              window.__vite_plugin_react_preamble_installed__ = true
+          </script>        <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.jsx"></script><script type="module" src="http://[::1]:5173/resources/js/Pages/Auth/Login.jsx"></script>            </head>
+              <body class="font-sans antialiased">
+                  <div id="app" data-page="{&quot;component&quot;:&quot;Auth\/Login&quot;,&quot;props&quot;:{&quot;errors&quot;:{},&quot;auth&quot;:{&quot;user&quot;:null},&quot;canResetPassword&quot;:true,&quot;status&quot;:null},&quot;url&quot;:&quot;\/login&quot;,&quot;version&quot;:&quot;6666cd76f96956469e7be39d750cc7d9&quot;}"></div>    </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: X-Inertia
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik9hNkI2aitKQVN1a3ZBS1BYL3pHNWc9PSIsInZhbHVlIjoiQVlQS29SM2JLNDh6dXdQM3liL0xIekpEZjFRK3BEWngrWUlCbHFOa2tuQUdIdGl1SkRmbm53cmc4UHBCWjFMWWp1YXpRZkhnZkFTVTY4YllZY2VkWmE3V05obFNFTmIyT1AwKzFsa25LYzNRZzNlZEJDUjBKV2dSUE1SbGNxSEgiLCJtYWMiOiJjNjliNTQ0Y2IzNzVhYzM2ZDdhMjVmZDA3MTJlOTg4NWI2YjkwMWY5MjM5YzE5NjRmYjk0ZmU4Yjc5Y2I0YWFkIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkFlZElHOGFJcjFtams0b1JRZi91akE9PSIsInZhbHVlIjoiWGhmaE9GNUk2REdUejQ2dFlTcldzcVJVTU8ycVlLeFpKdmRXQ2sxL3BSMjNjcEQvV2N4cTRxcWYxUkc3dytJK1RrVzYvQ0Z3YWp1R3ZyaHA1SklrcmtWZ2c0VlZUdy9FckpRZWMrUlVWQnpRdHNER1lhYWZxUW41ajA0dnlXajYiLCJtYWMiOiI4MjllMjQ1MWQ5Mzg2NDkzMDZiNmI0YWQ3YzhlNzQ4MDVjODE3MTM3NzAwYTUzZjc2OGVkOGM5NzU5N2QwMTYzIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming authentication request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: treinger@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: '@3g2s@j'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: treinger@example.com
+      password: '@3g2s@j'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: forgot-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the password reset link request view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          <!DOCTYPE html>
+          <html lang="en" class="dark">
+              <head>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                  <title inertia>Laravel</title>
+
+                  <!-- Fonts -->
+                  <link rel="preconnect" href="https://fonts.bunny.net">
+                  <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+                  <!-- Scripts -->
+                  <script type="text/javascript">Object.assign(Ziggy.routes,{"sanctum.csrf-cookie":{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"]},"ignition.healthCheck":{"uri":"_ignition\/health-check","methods":["GET","HEAD"]},"ignition.executeSolution":{"uri":"_ignition\/execute-solution","methods":["POST"]},"ignition.updateConfig":{"uri":"_ignition\/update-config","methods":["POST"]},"dashboard":{"uri":"dashboard","methods":["GET","HEAD"]},"task.index":{"uri":"task","methods":["GET","HEAD"]},"task.create":{"uri":"task\/create","methods":["GET","HEAD"]},"task.store":{"uri":"task","methods":["POST"]},"task.show":{"uri":"task\/{task}","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.edit":{"uri":"task\/{task}\/edit","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.update":{"uri":"task\/{task}","methods":["PUT","PATCH"],"parameters":["task"],"bindings":{"task":"id"}},"task.destroy":{"uri":"task\/{task}","methods":["DELETE"],"parameters":["task"],"bindings":{"task":"id"}},"profile.edit":{"uri":"profile","methods":["GET","HEAD"]},"profile.update":{"uri":"profile","methods":["PATCH"]},"profile.destroy":{"uri":"profile","methods":["DELETE"]},"register":{"uri":"register","methods":["GET","HEAD"]},"login":{"uri":"login","methods":["GET","HEAD"]},"password.request":{"uri":"forgot-password","methods":["GET","HEAD"]},"password.email":{"uri":"forgot-password","methods":["POST"]},"password.reset":{"uri":"reset-password\/{token}","methods":["GET","HEAD"],"parameters":["token"]},"password.store":{"uri":"reset-password","methods":["POST"]},"verification.notice":{"uri":"verify-email","methods":["GET","HEAD"]},"verification.verify":{"uri":"verify-email\/{id}\/{hash}","methods":["GET","HEAD"],"parameters":["id","hash"]},"verification.send":{"uri":"email\/verification-notification","methods":["POST"]},"password.confirm":{"uri":"confirm-password","methods":["GET","HEAD"]},"password.update":{"uri":"password","methods":["PUT"]},"logout":{"uri":"logout","methods":["POST"]}});</script>        <script type="module" >
+              import RefreshRuntime from 'http://[::1]:5173/@react-refresh'
+              RefreshRuntime.injectIntoGlobalHook(window)
+              window.$RefreshReg$ = () => {}
+              window.$RefreshSig$ = () => (type) => type
+              window.__vite_plugin_react_preamble_installed__ = true
+          </script>        <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.jsx"></script><script type="module" src="http://[::1]:5173/resources/js/Pages/Auth/ForgotPassword.jsx"></script>            </head>
+              <body class="font-sans antialiased">
+                  <div id="app" data-page="{&quot;component&quot;:&quot;Auth\/ForgotPassword&quot;,&quot;props&quot;:{&quot;errors&quot;:{},&quot;auth&quot;:{&quot;user&quot;:null},&quot;status&quot;:null},&quot;url&quot;:&quot;\/forgot-password&quot;,&quot;version&quot;:&quot;6666cd76f96956469e7be39d750cc7d9&quot;}"></div>    </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: X-Inertia
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlFuSzJ5bEdmRm1pSzFaeTlrTlZDOUE9PSIsInZhbHVlIjoiUVpiMlorZVVWbWVGbVJZZkxaT0FaS1NUY0JTeWFGVmpJYytwQ2hWM0xOaGxSbWJMMnlLbnFWQVNZYm44RGU3cUNUTyswMEF4bjVvOEZ4di93M2ZpSTVYa1FBRHdsLzZNbjNJMVc5RkJYR3p4NjBaQlFNM3pkaUR6ZzBNOHk2VjEiLCJtYWMiOiIzOGQwMDExZjA3OWEyNWRkMzM1OWFkNjRhMDM5MGY3Njk4ZjM5NDBjYjc1Yzk1YWQxZjcyNWNiMGI5ZDc4YTFlIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Im1OTG5jVFRBeGVoOGpkaUNiWHZpelE9PSIsInZhbHVlIjoiMC96Q1NyMWZxTmRnblloNGxXbkZCaWFhWUpndEV2YnEwZHRJY2x1T0VMcUZKMjAwUDJWLzRDRGNVZW9LSTBkMHhmNmhZc0wzR005NXdPTjhOOUphamhWQ1BYRUE1dzVDdTYrZ1lyVHdKMzF0TWJ0b2ZtbFFmWHR0TFJNQngyYVkiLCJtYWMiOiJhYjEzODc2ZDMyOWNhN2Q4ZGQxNjc5YjUzZDU3Yjg2MmUzNGNkMGJiYTYzYjM2YTczMWZmODljMDZhMzlkYWM2IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: forgot-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming password reset link request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: maybell.white@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: maybell.white@example.org
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'reset-password/{token}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the password reset view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: amet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      token: amet
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          <!DOCTYPE html>
+          <html lang="en" class="dark">
+              <head>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                  <title inertia>Laravel</title>
+
+                  <!-- Fonts -->
+                  <link rel="preconnect" href="https://fonts.bunny.net">
+                  <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+                  <!-- Scripts -->
+                  <script type="text/javascript">Object.assign(Ziggy.routes,{"sanctum.csrf-cookie":{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"]},"ignition.healthCheck":{"uri":"_ignition\/health-check","methods":["GET","HEAD"]},"ignition.executeSolution":{"uri":"_ignition\/execute-solution","methods":["POST"]},"ignition.updateConfig":{"uri":"_ignition\/update-config","methods":["POST"]},"dashboard":{"uri":"dashboard","methods":["GET","HEAD"]},"task.index":{"uri":"task","methods":["GET","HEAD"]},"task.create":{"uri":"task\/create","methods":["GET","HEAD"]},"task.store":{"uri":"task","methods":["POST"]},"task.show":{"uri":"task\/{task}","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.edit":{"uri":"task\/{task}\/edit","methods":["GET","HEAD"],"parameters":["task"],"bindings":{"task":"id"}},"task.update":{"uri":"task\/{task}","methods":["PUT","PATCH"],"parameters":["task"],"bindings":{"task":"id"}},"task.destroy":{"uri":"task\/{task}","methods":["DELETE"],"parameters":["task"],"bindings":{"task":"id"}},"profile.edit":{"uri":"profile","methods":["GET","HEAD"]},"profile.update":{"uri":"profile","methods":["PATCH"]},"profile.destroy":{"uri":"profile","methods":["DELETE"]},"register":{"uri":"register","methods":["GET","HEAD"]},"login":{"uri":"login","methods":["GET","HEAD"]},"password.request":{"uri":"forgot-password","methods":["GET","HEAD"]},"password.email":{"uri":"forgot-password","methods":["POST"]},"password.reset":{"uri":"reset-password\/{token}","methods":["GET","HEAD"],"parameters":["token"]},"password.store":{"uri":"reset-password","methods":["POST"]},"verification.notice":{"uri":"verify-email","methods":["GET","HEAD"]},"verification.verify":{"uri":"verify-email\/{id}\/{hash}","methods":["GET","HEAD"],"parameters":["id","hash"]},"verification.send":{"uri":"email\/verification-notification","methods":["POST"]},"password.confirm":{"uri":"confirm-password","methods":["GET","HEAD"]},"password.update":{"uri":"password","methods":["PUT"]},"logout":{"uri":"logout","methods":["POST"]}});</script>        <script type="module" >
+              import RefreshRuntime from 'http://[::1]:5173/@react-refresh'
+              RefreshRuntime.injectIntoGlobalHook(window)
+              window.$RefreshReg$ = () => {}
+              window.$RefreshSig$ = () => (type) => type
+              window.__vite_plugin_react_preamble_installed__ = true
+          </script>        <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.jsx"></script><script type="module" src="http://[::1]:5173/resources/js/Pages/Auth/ResetPassword.jsx"></script>            </head>
+              <body class="font-sans antialiased">
+                  <div id="app" data-page="{&quot;component&quot;:&quot;Auth\/ResetPassword&quot;,&quot;props&quot;:{&quot;errors&quot;:{},&quot;auth&quot;:{&quot;user&quot;:null},&quot;email&quot;:null,&quot;token&quot;:&quot;amet&quot;},&quot;url&quot;:&quot;\/reset-password\/amet&quot;,&quot;version&quot;:&quot;6666cd76f96956469e7be39d750cc7d9&quot;}"></div>    </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: X-Inertia
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik80ZzNEM1lUUGM3V1laTktPYWFVbHc9PSIsInZhbHVlIjoiNkRtTytQVmhOZlAzSGUwN1dXZ1oxTDVLZXAyTDYrbkRZdG5vRDA3VDdCMTExZVh4MG1zcCs4a0lCOEE2TlBxTFJHQzdORTdoUWVGckxqQnlKTUhXUjVmK2M0UVFlOWszVmxvek5jR3RubWVtY1RqcFdQUjZlVGJaVDg2b0s3b2wiLCJtYWMiOiJlMTMyOGUxMTVhZmQyMjRhOTQyZWUyMDA2MGRjMDBjZjkxMjEzNDgwOWNjNDBlYTA0ZWRkNjhiMDZlZGE2NWMzIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IkR2QlpOSjVwTldKWVdMaStrSHpHZHc9PSIsInZhbHVlIjoiMHIrWTQrMGV3WFVwNEZId1N4OVhqdVlmSDZMcUZWZFYzY0lhQ20xMk5CY1VFVVVGVE1GTFFleVZEcmRJYnAybmx6TjFJNEd4NXdQWTUrVVFVTm16Umxaa0hXWVM5cTQxZEdwYzhsdkwwa092QTRwN1pxaEhaWjllUnlvVFFqY1MiLCJtYWMiOiI1MDI2NmYyZjU4NWY5MDk1YzU0ZjMyMmZmZTMwYjUyOTBiZjY1OWY0YjE2NmE1YTMyMjhkNGY5YTMwZDMyODg1IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: reset-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming new password request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: ipsum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: destany44@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: quibusdam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      token: ipsum
+      email: destany44@example.com
+      password: quibusdam
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: verify-email
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the email verification prompt.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ilg0djlVWVAyZkY4TlplREhlM0R2NVE9PSIsInZhbHVlIjoiaFkzdHdhcldPVVpGWjYxNURTb3dJRVpCaStXVmhHMUZkenNBaGJWMWR5NUVNTDY1N3R5TEc0ai95Z0xNNHZTTTJVSWlmM0ZCbVVuRUR5UFdGMnBUUGNFTENJc1ZYc0o4ZFFqelZQVDNoMmxwbElaemk3bytZUzFDUGhWanV6U2QiLCJtYWMiOiI5NjNiMWI1OTlmYTA4N2VkYWJmNjhmOTRjNjU2ZTgxNWY2ODQ0M2ZjMDdhZjRiY2FmZTc1NzNhMDBiZGFlMTQwIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Imk5NWlrKytKS1JPcXB3QnllZ3NpTVE9PSIsInZhbHVlIjoibWp6V2NDdHU2aFYzVVJXaXRwVDQ2ZmVzZDNFYzdUUnlWTE1DUU5TZ0lpVXJlU0hFUSswL2JhK3B6Sk1XY0MybUNOamRnSllLa2tBQjFvaGwvVUdkZmNjQStNanVCTGx5ejRLWEF5QWlkZzJ2MTZDRUI3aHRLNUdDTWZnU3ZocXkiLCJtYWMiOiJhMTAwNGNmZDg1MzMzOGMwOGJlMTM5YzEwNWUzNDI4OWEwMjBlYWExNjI1ZWI1NTMxMTM3Y2FiYWExMTQ3NTc3IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'verify-email/{id}/{hash}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Mark the authenticated user's email address as verified."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the verify email.'
+        required: true
+        example: magni
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      hash:
+        name: hash
+        description: ''
+        required: true
+        example: quasi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: magni
+      hash: quasi
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ikd5dndBcTMyUnpqNE02NnBabzEyRkE9PSIsInZhbHVlIjoiMjVxbUtpN05vblg0Qm1adEdaYmtWY0lBelNQYjRPMUM4bWNyaktOZGtJUGxGZUJxSDVjQXJmV2licW9tUXVoVDJLRjBhL1hvOWFaajM4MGVoa3RVVUg4S0pHNGpyK1RyenBHZXpuTjVrMHpuMmo5VGtYYjNQMVU1QjZwdlBxUFkiLCJtYWMiOiI4ZDE5YjY5NTk5NjQyMWUxM2I1M2I3NTc4MTJhMDA1NzNlM2VkYTgyNDc2OWMxMDU3NDQ0OTM5NjczNjY3Mjk5IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ikp0bW1GVFZScDhJdnE4MGZmNXhtWGc9PSIsInZhbHVlIjoidDI2QjBYODFwQThnNlg5ZVI5TFEzMGhvaWdEaGVNNUxOZ1YwNlN4N0pjY1RaMm5ndVAzSHhsNkFNbUZPY2hOaC9Pa2JlWUFLcTBFSk9GT2lsSWxWTmNMVklpaGY3bUxBZmFsTHI2Uld1Qi9CSFBMUnM5d3JXTUF2d1JVajBJR3EiLCJtYWMiOiI0NDQ5OTMwYTJkZDQ0N2NhOGU4NThmMTgzMGE4MmIyODJkNGFhYmY4NzY0NTRiYzMwNWNhNTJjYWE3NmQ2OWRkIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: email/verification-notification
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send a new email verification notification.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: confirm-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the confirm password view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlB4d3greTlhcHhpNFF5RDgreTRwS2c9PSIsInZhbHVlIjoiQ1BaZmtQYWVOcUNEbzVOb28vNGh6cTRTTThzckpHTUpEa3FYeUtmL2VMRllmR3lncm8yYVpjOVB3UlloZFRJQzdPaFFPNTFGVFZQNEdFOHd6ZVNaZG1valBBRWJzM2tFazgwUHdXZGZSQjRGY3E1NXBHdWZHL2Q0RDJicFo0aGYiLCJtYWMiOiJhYTVhYTgyNjViYzQwYjJiYTA5NmVkNGIyMWQzZjhkYWEwMmM5MzY2YzNkNGYzOWIyZGU1Y2U0NWU1YTc3YzM5IiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImdXczB0WjdITkhDR2NJNC9XWWQ5cEE9PSIsInZhbHVlIjoiWjhsUDdHT2t4RWR6UW5uRThweHdtVUU0dndIenQxQm1sSGN5MkxjbjRxZ09kWHRQREo3d28xeGwxdHl3WXlnWjUrYk9UdEdxQW5ObG5CYjMwcktja285bHdNNHdtQmdYRVpPWSt4ZzBweGF3d3RWczVYYi9xcjJRM2hkRjlRMkgiLCJtYWMiOiIwMTIxZWZmN2ZiYTE4NGEwYTQ3Mjk0NDBjZDIwNmJkNmQwMjY2MDU0MTNjN2IyOWEwYmVjMjc4ODVkODBiMWEwIiwidGFnIjoiIn0%3D; expires=Mon, 15 Apr 2024 11:51:18 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: confirm-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Confirm the user's password."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Update the user's password."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      current_password:
+        name: current_password
+        description: ''
+        required: true
+        example: animi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: quibusdam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      current_password: animi
+      password: quibusdam
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Destroy an authenticated session.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
