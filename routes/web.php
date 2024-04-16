@@ -20,9 +20,14 @@ use Inertia\Inertia;
 Route::redirect('/', '/dashboard');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', fn() => Inertia::render('Dashboard'))
+    Route::get('/dashboard', fn () => Inertia::render('Dashboard'))
         ->name('dashboard');
-    Route::resource('task', TaskController::class);
+    // Route::resource('task', TaskController::class);
+    Route::controller(TaskController::class)->name('task.')->group(function () {
+        Route::get('task', 'index')->name('index');
+        Route::get('task/create', 'create')->name('create');
+        Route::get('task/{task}/edit', 'edit')->name('edit');
+    });
 });
 
 
@@ -33,4 +38,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
